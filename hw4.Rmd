@@ -1,3 +1,5 @@
+
+```{r}
 #question 1
 #a.(1,2,3,...,19,20)
 a=c(1:20)
@@ -16,11 +18,16 @@ rep(tmp,10,len=31)
 #occurrences	of	6	and	30	occurrences	of	3.
 rep(tmp,c(10,20,30))
 
+```
+
+```{r}
 #question 2. Create	a	vector	of	the	values	of	ex
 #cos(x)	at	x	=	3,3.1,3.2,...,5.9,6.
 x=seq(3,6,by=.1)
 exp(x)*cos(x)
+```
 
+```{r}
 #question 3
 #a).
 a1=seq(3,36,by=3)
@@ -31,7 +38,9 @@ c(0.1^a1*(0.2^a2))
 a3=seq(1,25)
 a4=2^a3
 a4/a3
+```
 
+```{r}
 #question 4
 #a).
 i=seq(10,100)
@@ -40,12 +49,18 @@ sum(i^3+4*(i^2))
 i=seq(1,25)
 sum((2^i)/i+(3^i)/(i^2))
 
+```
+
+```{r}
 #question 5
 #a).
 paste('label',1:30)
 #b).
 paste('fn',1:30,sep='')#sep=''can delete the spaces
+```
 
+
+```{r}
 #question 6
 set.seed(50)
 xVec = sample(0:999, 250, replace=T)#random x
@@ -59,7 +74,9 @@ vec3=xVec[1:248]+2*xVec[2:249]-xVec[3:250]
 #d).
 xcal=xVec[-250]
 sum(exp(-xVec[-1])/(xcal+10))
+```
 
+```{r}
 #question 7
 #a).
 yVec[yVec>600]#Pick out the values in yVec which are greater than 600.
@@ -80,8 +97,12 @@ xVec[order(yVec)]#Sort the numbers in the vector xVec in the order of increasing
 #h).
 yVec[seq(1,250,by=3)]#1,4,7......
 
+```
 
+```{r}
 #question 8
 x1=seq(2,38,by=2) #numerator
 x2=seq(3,39,by=2) #denominator
 sum(cumprod(x1/x2))+1
+
+```
