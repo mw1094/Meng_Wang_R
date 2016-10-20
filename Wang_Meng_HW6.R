@@ -30,9 +30,9 @@ ggplot(diamonds,aes(log(carat), resid(diamonds_lm),color=factor(color)))+geom_po
 
 #5
 hist_carat <- ggplot(diamonds,aes(carat,colour=factor(color)))+geom_histogram(aes(y=..density..),binwidth=0.05) +
-              theme(axis.title.x=element_blank(),axis.title.y=element_blank(),legend.position='none')
+              theme(axis.title.x=element_blank(),axis.title.y=element_blank(),legend.position='none',plot.margin=unit(c(0,0,0,0),'cm'))
 hist_price <- ggplot(diamonds,aes(price,fill=factor(color)))+geom_histogram(aes(y=..density..),binwidth=100) +
-              theme(axis.title.x=element_blank(),axis.title.y=element_blank(),legend.position='none')
+              theme(axis.title.x=element_blank(),axis.title.y=element_blank(),legend.position='none',plot.margin=unit(c(0,0,0,0),'cm'))
   # make two density histograms and name them as hist_carat and hist_price
   # take off axis name and 'factor(color)' as sample figure shows
 diamonds_lm = lm(log(price) ~ log(carat), diamonds) 
@@ -40,9 +40,9 @@ ggplot(diamonds,aes(log(carat), resid(diamonds_lm),color=factor(color)))+geom_po
   labs(title="Diamonds - Weight to Price by Color",x='Weight',y='Price Residuals')+
   theme(plot.title=element_text(colour='blue'),legend.position='top')
   # repeat steps in #4 again to make background graph
-vp1 <- viewport(w=0.4,h=0.2,x=0.25,y=0.16)
+vp1 <- viewport(w=0.4,h=0.2,x=0.24,y=0.15)
   # define the position of hist_price
-vp2 <- viewport(w=0.4,h=0.2,x=0.82,y=0.75)
+vp2 <- viewport(w=0.4,h=0.2,x=0.85,y=0.77)
   # define the position of hist_carat
 print(hist_price, vp = vp1)
 print(hist_carat, vp = vp2)
