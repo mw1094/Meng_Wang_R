@@ -23,13 +23,13 @@ lapply(diamonds,class)
 #5
 #Loop through any dataframe and calculate the mean of
 #every numeric column.
-diamonds_num <- diamonds[sapply(diamonds,is.numeric)]#find numeric columns
+diamonds_num <- diamonds[,sapply(diamonds,is.numeric)]#find numeric columns
 lapply(diamonds_num,mean,na.rm=TRUE)#calculate the mean of every numeric column
 
 #question 6
 #Loop through any dataframe and create a frequency table
 #for every factor column.
-lapply(diamonds[sapply(diamonds,is.factor)],table)#find factor columns and make the table
+lapply(diamonds[,sapply(diamonds,is.factor)],table)#find factor columns and make the table
 
 #question 7
 #Determine the number of rows containing NA (missing value) in each column
