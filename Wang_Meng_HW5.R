@@ -1,9 +1,10 @@
 library("ggplot2")
-
+##Prof G - Nice work!
 #1
 #Print all methods associates with a dataframe
 methods(class=data.frame)
 #Print all attributes
+##Prof G - a little messy
 attributes(diamonds)
 #Determine the number of columns in a dataframe
 ncol(diamonds)

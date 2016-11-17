@@ -1,12 +1,15 @@
-
+##Prof G -  Nice work but I had to add several lines to get output included in the markdown file. See below. Also comments could have been better, especially explaining cumprod.
 ```{r}
 #question 1
 #a.(1,2,3,...,19,20)
 a=c(1:20)
+a ##Prof G - added this
 #b.(20,19,...,2,1)
 b=c(20:1)
+b ##Prof G - added this
 #c.(1,2,3,...,19,20,19,18,...,2,1)	
 c=c(1:20, 19:1)
+c ##Prof G - added this
 #d.(4,6,3)	and	assign	it	to	the	name	tmp.
 c(4,6,3)->tmp
 #e.(4,6,3,	4,6,3,...,4,6,3)	where	there	are	10	occurrences	of	4.	
@@ -67,11 +70,14 @@ xVec = sample(0:999, 250, replace=T)#random x
 yVec = sample(0:999, 250, replace=T)#random y
 #a).
 Vec1=yVec[-1]-xVec[-250]#Y2-X1,...Yn-Xn-1 yVec[-1]can will take off the first number
+Vec1 ##Prof G - added this
 #b).
 vec2=sin(yVec[-250])/cos(xVec[-1])#y1 to yn-1, x2 to xn
 #c).
+vec2 ##Prof G - added this
 vec3=xVec[1:248]+2*xVec[2:249]-xVec[3:250] #x1+2x2-x3...
 #d).
+vec3 ##Prof G - added his
 xcal=xVec[-250]
 sum(exp(-xVec[-1])/(xcal+10))
 ```
@@ -103,6 +109,8 @@ yVec[seq(1,250,by=3)]#1,4,7......
 #question 8
 x1=seq(2,38,by=2) #numerator: 2,4,6,8...38
 x2=seq(3,39,by=2) #denominator: 3,5,7,9...39
+
+##Prof G - Needs more explanation
 sum(cumprod(x1/x2))+1#cumulative product of x1/x2
 
 ```
